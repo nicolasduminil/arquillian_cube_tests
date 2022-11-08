@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<arquillian xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xmlns="http://jboss.org/schema/arquillian"
+            xsi:schemaLocation="http://jboss.org/schema/arquillian
+    http://jboss.org/schema/arquillian/arquillian_1_0.xsd">
+  <extension qualifier="docker">
+    <property name="serverVersion">1.41</property>
+    <property name="definitionFormat">CUBE</property>
+    <property name="dockerContainers">
+      wildfly:
+        buildImage:
+          dockerfileLocation: src/test/resources/wildfly
+          noCache: true
+        exposedPorts: [8080/tcp, 9990/tcp]
+        await:
+          strategy: log
+          match: "WFLYSRV0025"
+          stdOut: true
+          stdErr: true
+          timeout: 300
+          occurrences: 1
+        portBindings: [9990->9990/tcp, 8080->8080/tcp]
+    </property>
+  </extension>
+  <container qualifier="wildfly">
+    <configuration>
+      <property name="managementAddress">127.0.0.1</property>
+      <property name="managementPort">9990</property>
+      <property name="username">admin</property>
+      <property name="password">admin123</property>
+    </configuration>
+  </container>
+</arquillian>

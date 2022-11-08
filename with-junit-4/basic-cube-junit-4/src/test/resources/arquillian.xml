@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<arquillian xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xmlns="http://jboss.org/schema/arquillian"
+            xsi:schemaLocation="http://jboss.org/schema/arquillian
+    http://jboss.org/schema/arquillian/arquillian_1_0.xsd">
+  <extension qualifier="docker">
+    <property name="serverVersion">1.41</property>
+    <property name="definitionFormat">CUBE</property>
+    <property name="dockerContainers">
+      payara:
+        image: payara/server-full:5.2022.4-jdk11
+        exposedPorts: [4848/tcp, 8080/tcp]
+        await:
+          strategy: polling
+        env: []
+        portBindings: [4848/tcp, 8080/tcp]
+    </property>
+    <!--property name="dockerContainersFile">docker-compose.yml</property-->
+  </extension>
+  <container qualifier="payara">
+    <configuration>
+      <property name="adminPort">4848</property>
+      <property name="adminUser">admin</property>
+      <property name="adminPassword">admin</property>
+      <property name="adminHttps">true</property>
+      <property name="authorisation">true</property>
+    </configuration>
+  </container>
+</arquillian>
