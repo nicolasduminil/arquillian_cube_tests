@@ -13,16 +13,16 @@
   <name>Arquillian Tests :: The JUnit 4 Basic Wildfly module</name>
   <dependencies>
     <dependency>
-      <groupId>org.wildfly</groupId>
+      <groupId>org.wildfly.arquillian</groupId>
       <artifactId>wildfly-arquillian-container-remote</artifactId>
-      <version>8.2.1.Final</version>
+      <version>5.0.0.Alpha5</version>
       <scope>test</scope>
-      <exclusions>
+      <!--exclusions>
         <exclusion>
           <artifactId>jconsole</artifactId>
           <groupId>sun.jdk</groupId>
         </exclusion>
-      </exclusions>
+      </exclusions-->
     </dependency>
   </dependencies>
   <build>
@@ -31,6 +31,11 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-failsafe-plugin</artifactId>
+        <configuration>
+          <systemPropertyVariables>
+            <arquillian.launch>wildfly</arquillian.launch>
+          </systemPropertyVariables>
+        </configuration>
       </plugin>
     </plugins>
   </build>

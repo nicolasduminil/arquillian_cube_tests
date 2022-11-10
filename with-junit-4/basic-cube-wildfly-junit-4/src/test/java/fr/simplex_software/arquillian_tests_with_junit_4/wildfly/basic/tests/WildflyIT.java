@@ -29,6 +29,7 @@ public class WildflyIT
   }
 
   @Test
+  @RunAsClient
   public void testOnPayaraShouldReturnOk() throws MalformedURLException
   {
     given()

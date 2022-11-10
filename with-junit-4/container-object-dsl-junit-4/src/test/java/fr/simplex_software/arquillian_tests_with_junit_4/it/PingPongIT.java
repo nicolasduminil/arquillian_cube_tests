@@ -22,7 +22,7 @@ public class PingPongIT
   @DockerContainer
   Container pingpong = Container.withContainerName("pingpong")
     .fromImage("jonmorehouse/ping-pong")
-    .withPortBinding(8080)
+    .withPortBinding("18080->8080")
     .build();
 
   @Before
