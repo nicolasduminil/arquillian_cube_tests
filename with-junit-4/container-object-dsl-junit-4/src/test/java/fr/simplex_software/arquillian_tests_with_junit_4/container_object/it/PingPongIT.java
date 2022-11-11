@@ -1,4 +1,4 @@
-package fr.simplex_software.arquillian_tests_with_junit_4.it;
+package fr.simplex_software.arquillian_tests_with_junit_4.container_object.it;
 
 import io.restassured.http.*;
 import org.arquillian.cube.docker.impl.client.containerobject.dsl.*;

@@ -5,6 +5,7 @@
     <file type="web" url="file://$PROJECT_DIR$/with-junit-4/basic-cube-junit-4" />
     <file type="web" url="file://$PROJECT_DIR$/with-junit-4/basic-cube-wildfly-junit-4" />
     <file type="web" url="file://$PROJECT_DIR$/with-junit-4/container-object-dsl-junit-4" />
+    <file type="web" url="file://$PROJECT_DIR$/with-junit-4/container-object-junit-4" />
     <file type="web" url="file://$PROJECT_DIR$/with-junit-5/container-object-dsl-junit-5" />
   </component>
   <component name="MavenProjectsManager">
