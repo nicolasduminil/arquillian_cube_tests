@@ -7,13 +7,20 @@
     <file type="web" url="file://$PROJECT_DIR$/with-junit-4/container-object-dsl-junit-4" />
     <file type="web" url="file://$PROJECT_DIR$/with-junit-4/container-object-junit-4" />
     <file type="web" url="file://$PROJECT_DIR$/with-junit-5/container-object-dsl-junit-5" />
+    <file type="web" url="file://$PROJECT_DIR$/with-junit-5/container-object-junit-5" />
   </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/with-junit-5/container-object-dsl-junit-5/pom.xml" />
+        <option value="$PROJECT_DIR$/with-junit-5/container-object-junit-5/pom.xml" />
       </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/with-junit-5/basic-cube-junit5/pom.xml" />
+      </set>
     </option>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">

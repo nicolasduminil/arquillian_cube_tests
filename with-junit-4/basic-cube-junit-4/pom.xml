@@ -15,34 +15,11 @@
     <cert.skip.import>true</cert.skip.import>
     <cert.skip.delete>true</cert.skip.delete>
   </properties>
-  <dependencyManagement>
-    <dependencies>
-      <dependency>
-        <groupId>fish.payara.api</groupId>
-        <artifactId>payara-bom</artifactId>
-        <version>5.2022.4</version>
-        <type>pom</type>
-        <scope>import</scope>
-      </dependency>
-    </dependencies>
-  </dependencyManagement>
   <dependencies>
     <dependency>
       <groupId>fish.payara.arquillian</groupId>
       <artifactId>arquillian-payara-server-remote</artifactId>
-      <version>3.0.alpha6</version>
       <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>fish.payara.arquillian</groupId>
-      <artifactId>payara-client-ee9</artifactId>
-      <version>3.0.alpha7</version>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.yaml</groupId>
-      <artifactId>snakeyaml</artifactId>
-      <version>1.19</version>
     </dependency>
   </dependencies>
   <build>
@@ -93,17 +70,4 @@
       </plugin>
     </plugins>
   </build>
-  <repositories>
-    <repository>
-      <id>payara-patched-externals</id>
-      <name>Payara Patched Externals</name>
-      <url>https://nexus.payara.fish/repository/payara-artifacts/</url>
-      <releases>
-        <enabled>true</enabled>
-      </releases>
-      <snapshots>
-        <enabled>false</enabled>
-      </snapshots>
-    </repository>
-  </repositories>
 </project>

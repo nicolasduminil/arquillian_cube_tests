@@ -14,7 +14,6 @@
   <modules>
     <module>container-object-dsl-junit-4</module>
     <module>basic-cube-junit-4</module>
-    <module>basic-cube-wildfly-junit-4</module>
     <module>container-object-junit-4</module>
   </modules>
   <dependencies>

@@ -13,6 +13,8 @@
   <name>Arquillian Tests :: The JUnit 5 parent POM</name>
   <modules>
     <module>container-object-dsl-junit-5</module>
+    <module>basic-cube-junit-5</module>
+    <module>container-object-junit-5</module>
   </modules>
   <dependencyManagement>
     <dependencies>
@@ -29,6 +31,11 @@
     <dependency>
       <groupId>org.junit.jupiter</groupId>
       <artifactId>junit-jupiter</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.jboss.arquillian.junit5</groupId>
+      <artifactId>arquillian-junit5-container</artifactId>
       <scope>test</scope>
     </dependency>
     <dependency>
